@@ -1,0 +1,201 @@
+
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS VARIABLES */
+:root {
+    --CARD1-PRIMARY: #1c9cf5;
+    --CARD1-SECONDARY: #041725;
+    --CARD2-PRIMARY: #ff9714;
+    --CARD2-SECONDARY: #251901;
+    --CARD3-PRIMARY: #fed732;
+    --CARD3-SECONDARY: #272107;
+    --FONT-COLOR: #FFF;
+}
+
+/* GENERAL STYLES */
+body {
+    font-family: 'Inter', sans-serif;
+    min-height: 100vh;
+    max-width: 100vw;
+    background-color: rgb(3, 3, 3);
+    color: var(--FONT-COLOR);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+/* FONTS */
+.card h2 {
+    font-size: clamp(1.5rem, 1rem + 3vw, 1.5rem);
+    text-align: left;
+    word-wrap: break-all;
+}
+
+
+.description .title p {
+    font-size: .9rem;
+    word-wrap: break-word;
+    text-align: left;
+    margin-top: 1.2rem;
+    line-height: 1.4;
+}
+
+
+
+/* MAIN */
+.main {
+    max-width: 900px;
+    margin: 50px auto;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    width: 900px;
+    overflow: hidden;
+}
+
+.card {
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 400px;
+    width: 20%;
+    transition: all .5s linear;
+    transform-origin: right;
+    overflow: hidden;
+    border-radius: 25px;
+}
+
+
+
+
+/* DESCRIPTION */
+.description {
+    display: flex;
+    justify-content: space-between;
+    height: 100%; 
+    width: 120%; 
+    position: relative;
+    overflow: hidden;
+}
+
+.display {
+    display: none;
+}
+
+.des1 {
+    background-color: var(--CARD1-SECONDARY);  
+}
+
+.des2 {
+    background-color: var(--CARD2-SECONDARY);  
+}
+
+.des3 {
+    background-color: var(--CARD3-SECONDARY);
+}
+
+
+.title {
+    width: 220px; 
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding-block: 1rem 3rem;
+    margin: 1rem 1rem 2rem;
+    padding-bottom: 6rem;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+} 
+
+
+
+/* LOGO SECTION */
+.logo {
+    height: 100%;
+    position: relative;
+    width: 100%;
+    transition: all .5s linear;
+    z-index: 100;
+}
+
+.logo1 {
+    background-color: var(--CARD1-PRIMARY);
+    
+}
+
+.logo2 {
+    background-color: var(--CARD2-PRIMARY);
+}
+
+.logo3 {
+    background-color: var(--CARD3-PRIMARY);
+}
+
+.logo img {
+    position: absolute;
+    top: 50%;  
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+
+
+
+
+
+
+
+
+
+/* MORE ICON */
+
+.more {
+    display: flex;
+    align-items: center;
+    gap: .4rem;
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    font-size: .7rem;
+
+}
+
+.more i {
+    padding: 5px 6px;
+    border: 1px solid;
+    border-radius: 50%;
+}
+
+.more1 {
+    color: var(--CARD1-PRIMARY);
+}
+
+
+.more2 {
+    color: var(--CARD2-PRIMARY);
+}
+
+.more3 {
+    color: var(--CARD3-PRIMARY);
+}
+
+
+/* ACTIVE STATE */
+
+.active {
+    width: 60%;
+}
+
